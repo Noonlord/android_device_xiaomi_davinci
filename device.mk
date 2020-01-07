@@ -289,6 +289,14 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 
+# ParanoidDoze
+PRODUCT_PACKAGES += \
+    ParanoidDoze
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sensor.proximity=true \
+    ro.sensor.pickup=xiaomi.sensor.pickup
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service
