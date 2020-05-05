@@ -293,6 +293,10 @@ TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 PRODUCT_PACKAGES += \
     android.hardware.power-service
 
+# Prebuilts
+PRODUCT_PACKAGES += \
+    GoogleCameraGo
+
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
