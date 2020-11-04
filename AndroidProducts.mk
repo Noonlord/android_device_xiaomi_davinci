@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/statix_davinci.mk
+    $(LOCAL_DIR)/pixys_davinci.mk
 
 COMMON_LUNCH_CHOICES := \
-    statix_davinci-user \
-    statix_davinci-userdebug \
-    statix_davinci-eng
+    pixys_davinci-user \
+    pixys_davinci-userdebug \
+    pixys_davinci-eng
