@@ -188,6 +188,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 VENDOR_SECURITY_PATCH := 2020-07-01
 
 # Selinux
+SELINUX_IGNORE_NEVERALLOWS := true
 TARGET_SEPOLICY_DIR := msmsteppe
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
