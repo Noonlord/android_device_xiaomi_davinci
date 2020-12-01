@@ -25,6 +25,7 @@ $(call inherit-product, device/xiaomi/davinci/device.mk)
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 EVO_BUILD_TYPE := OFFICIAL
+EXTRA_FOD_ANIMATIONS := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_STOCK_ARCORE := true
