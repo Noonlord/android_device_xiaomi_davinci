@@ -1,0 +1,13 @@
+type sysfs_fod, sysfs_type, fs_type;
+
+allow hal_fingerprint_default sysfs_fod:file rw_file_perms;
+allow hal_fingerprint_default vendor_sysfs_graphics:file rw_file_perms;
+
+allow hal_fingerprint_default hal_fingerprint_hwservice_xiaomi:hwservice_manager find;
+allow hal_fingerprint_default hal_touchfeature_hwservice_xiaomi:hwservice_manager find;
+
+allow vendor_hal_perf_default hal_fingerprint_default:dir {search};
+allow vendor_hal_perf_default hal_fingerprint_default:file {read write open};
+allow hal_fingerprint_default vendor_fod_hwservice:hwservice_manager {find add};
+binder_call(hal_fingerprint_default, hal_fingerprint_default)
+binder_call(hal_fingerprint_default, hal_touchfeature_default)
