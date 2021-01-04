@@ -421,6 +421,13 @@ vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
+# Face Unlock - from pa-ruby-alpha-1-laurel_sprout-20201221
+-system_ext/priv-app/ParanoidFaceSense/ParanoidFaceSense.apk|07cbc55f291565ebab823e54b64e06a67f429252
+system_ext/lib64/libFaceDetectCA.so|0e9e08c7cc976e86a8b2c80732b0f3cef3ed09be
+system_ext/lib64/libMegviiUnlock-jni-1.2.so|cd3747023c62b3f489da6d104ce3ab51dd3d8bb7
+system_ext/lib64/libMegviiUnlock.so|25f86732d5bf05679b69e4fa41957efb5491ebc6
+system_ext/lib64/libmegface.so|9b598b767a124076d87bb7cc0097d968df620a1d
+
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc

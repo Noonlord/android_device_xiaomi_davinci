@@ -142,6 +142,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
+# Face Unlock
+PRODUCT_PACKAGE += \
+    vendor.aospa.biometrics.face
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.touchfeature@1.0 \
