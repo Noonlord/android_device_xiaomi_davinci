@@ -1,13 +1,25 @@
-<manifest version="1.0" type="device" target-level="3">
+<compatibility-matrix version="1.0" type="framework">
     <hal format="hidl">
-        <name>android.hardware.sensors</name>
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IGoodixFingerprintDaemonExt</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.fingerprintextension</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>ISensors</name>
+            <name>IXiaomiFingerprint</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ISensors/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.motor</name>
@@ -17,7 +29,6 @@
             <name>IMotor</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IMotor/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.touchfeature</name>
@@ -27,6 +38,5 @@
             <name>ITouchFeature</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ITouchFeature/default</fqname>
     </hal>
-</manifest>
+</compatibility-matrix>

@@ -1,5 +1,7 @@
 # Audio
 vendor.audio.feature.compr_voip.enable=false
+vendor.audio.feature.hdmi_passthrough.enable=false
+vendor.audio.feature.ssrec.enable=false
 vendor.voice.path.for.pcm.voip=false
 
 # HVDCP

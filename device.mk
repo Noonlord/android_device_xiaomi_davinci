@@ -24,6 +24,17 @@ $(call inherit-product, device/xiaomi/sm6150-common/sm6150.mk)
 $(call inherit-product, vendor/xiaomi/davinci/davinci-vendor.mk)
 
 # Audio
+PRODUCT_PACKAGES += \
+    audio.primary.sm6150 \
+    audio.r_submix.default
+
+PRODUCT_PACKAGES += \
+    liba2dpoffload \
+    libhdmiedid \
+    libhfp \
+    libsndmonitor \
+    libspkrprot
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_idp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_idp.xml \
@@ -41,10 +52,15 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     vendor.aospa.biometrics.fingerprint.inscreen@1.0-service \
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150-ext \
     vendor.xiaomi.hardware.touchfeature@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     vendor/pa/config/permissions/vendor.aospa.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.aospa.biometrics.fingerprint.inscreen.xml
+
+# Fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
 # Init scripts
 PRODUCT_COPY_FILES += \
@@ -87,6 +103,12 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_DENSITY := 440
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/xiaomi
